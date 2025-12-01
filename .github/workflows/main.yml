@@ -16,12 +16,12 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
-        java-version: '17'
+        java-version: '11'  # پرانے فلٹر کے لیے جاوا 11 بہتر ہے
 
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        channel: 'stable'
+        flutter-version: '3.10.0' # ہم نے ورژن فکس کر دیا ہے تاکہ پرانا کوڈ چل سکے
 
     - name: Install Dependencies
       run: flutter pub get
